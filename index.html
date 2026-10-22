@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 Week English Program | 1.1.6 Cultural Diversity in the US</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f5f6f7',
+                            100: '#e5e7eb',
+                            200: '#d1d5db',
+                            300: '#b5bac0',
+                            400: '#737a82',
+                            500: '#737a82',
+                            600: '#54595f',
+                            700: '#54595f',
+                            800: '#54595f',
+                            900: '#2a2c2e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Custom Styles for Flipcards & Print formatting -->
+    <style>
+        /* Helvetica is loaded from the user device or an appropriately licensed webfont. */
+        
+        body {
+            font-family: 'Helvetica Now', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #f3f3f3;
+            color: #2a2c2e;
+        }
+
+        /* Perspective for 3D flip card effect */
+        .perspective-1000 {
+            perspective: 1000px;
+        }
+        
+        .transform-style-3d {
+            transform-style: preserve-3d;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .rotate-y-180 {
+            transform: rotateY(180deg);
+        }
+        
+        .backface-hidden {
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+        }
+
+        /* Print Media Styles */
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+            .print-only {
+                display: block !important;
+            }
+            body {
+                background: white;
+                color: black;
+            }
+            .step-section {
+                display: block !important;
+                page-break-after: always;
+            }
+            .shadow-lg, .shadow-md, .shadow-sm {
+                box-shadow: none !important;
+                border: 1px solid #cbd5e1;
+            }
+        }
+
+        .step-section {
+            display: none;
+        }
+
+        .step-section.active {
+            display: block;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        :root { --subject: #54595f; --subject-light: #e5e7eb; --ink: #2a2c2e; }
+        /* Master header: subject gray with light-gray controls */
+        .master-header { background:#54595f !important; color:#ffffff !important; }
+        .master-header h1 { color:#ffffff !important; }
+        .master-header .brand-badge { background:#e5e7eb !important; color:#54595f !important; }
+        .master-header .header-meta { color:#eef0f2 !important; }
+        .master-tabs { background:#e5e7eb !important; border-color:#b5bac0 !important; }
+        .master-tabs .nav-tab:not(.bg-brand-600) { color:#2a2c2e !important; }
+        .master-tabs .nav-tab:not(.bg-brand-600):hover { background:#d1d5db !important; color:#2a2c2e !important; }
+        .master-tabs .nav-tab.bg-brand-600 { background:#54595f !important; color:#fff !important; }
+        .master-header button.bg-brand-600 { background:#e5e7eb !important; color:#54595f !important; }
+        .master-header button.bg-brand-600:hover { background:#d1d5db !important; }
+        .key-accuracy-rule { background:#f5f6f7 !important; border-left-color:#737a82 !important; color:#54595f !important; }
+
+        html { font-size: 16px; }
+        body, button, input, textarea, select { font-family: 'Helvetica Now', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+        button { font-size: 15px; font-weight: 600; }
+        main h2 { font-size: 28px; line-height: 1.25; font-weight: 700; }
+        main h3 { font-size: 22px; line-height: 1.3; font-weight: 600; }
+        main p { line-height: 1.6; }
+        main .text-xs { font-size: 14px; }
+        main .text-sm { font-size: 16px; }
+        main .text-base { font-size: 16px; }
+        main .text-lg { font-size: 18px; }
+        main input, main textarea, main select { background: #fff; color: #2a2c2e; font-size: 16px; }
+        main input:focus, main textarea:focus, main select:focus { outline: 2px solid var(--subject); outline-offset: 2px; }
+        .nav-tab { font-size: 14px; }
+        .nav-tab:focus-visible, button:focus-visible { outline: 3px solid #b5bac0; outline-offset: 2px; }
+        .master-bottom-nav { display:flex; align-items:center; justify-content:space-between; gap:16px; max-width:1152px; margin:0 auto 20px; padding:12px 20px; }
+        .master-bottom-nav button { background:var(--subject); color:white; padding:11px 20px; border-radius:9px; }
+        .master-bottom-nav button:disabled { background:#d9d9d9; color:#54595f; cursor:not-allowed; }
+        #section-progress-label { color:#e2e2e2; font-size:12px; margin-left:12px; white-space:nowrap; }
+        @media (max-width: 768px) { main h2 {font-size:25px;} main h3 {font-size:20px;} .master-bottom-nav {padding:12px;} }
+        @media print { .master-bottom-nav {display:none!important;} .step-section {break-after:auto;page-break-after:auto;} }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- TOP HEADER & NAVIGATION -->
+    <header class="master-header bg-[#54595f] text-white sticky top-0 z-50 shadow-md no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Branding -->
+                <div class="flex items-center space-x-3">
+                    <div class="brand-badge bg-[#e5e7eb] text-[#54595f] font-bold p-2 rounded-lg text-sm tracking-wide">
+                        10W
+                    </div>
+                    <div>
+                        <h1 class="font-bold text-lg leading-tight">Lesson 1.1.6: Cultural Diversity in the US</h1>
+                        <p class="header-meta text-xs font-medium text-[#eef0f2]">10 Week English Program · Day 1 · Soft Skills · CEFR A2–B1 · 75 min</p>
+                    </div>
+                </div>
+
+                <!-- Print & Export Action -->
+                <button onclick="window.print()" class="flex items-center gap-2 bg-brand-600 hover:bg-brand-500 text-white text-xs sm:text-sm font-semibold py-2 px-3 sm:px-4 rounded-lg transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+                    <span class="hidden sm:inline">Print / Save PDF</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="w-full bg-[#b5bac0] h-1.5" role="progressbar" aria-label="Lesson section progress" aria-valuemin="0" aria-valuemax="7" aria-valuenow="1" id="progress-track">
+            <div id="progress-bar" class="bg-brand-500 h-full transition-all duration-300" style="width:14.2857%"></div>
+        </div>
+
+        <!-- Navigation Tabs -->
+        <nav class="master-tabs bg-[#e5e7eb] border-t border-[#b5bac0] overflow-x-auto">
+            <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 flex space-x-1 sm:space-x-2 py-2 text-xs sm:text-sm whitespace-nowrap">
+<button onclick="switchStep(0)" id="tab-0" class="nav-tab px-3 py-1.5 rounded-md font-medium text-white bg-brand-600">Overview</button>
+<button onclick="switchStep(1)" id="tab-1" class="nav-tab px-3 py-1.5 rounded-md font-medium text-slate-300 hover:text-white hover:bg-slate-700">1. Encounter (10m)</button>
+<button onclick="switchStep(2)" id="tab-2" class="nav-tab px-3 py-1.5 rounded-md font-medium text-slate-300 hover:text-white hover:bg-slate-700">2. Clarify (20m)</button>
+<button onclick="switchStep(3)" id="tab-3" class="nav-tab px-3 py-1.5 rounded-md font-medium text-slate-300 hover:text-white hover:bg-slate-700">3. Remember (15m)</button>
+<button onclick="switchStep(4)" id="tab-4" class="nav-tab px-3 py-1.5 rounded-md font-medium text-slate-300 hover:text-white hover:bg-slate-700">4. Internalize (15m)</button>
+<button onclick="switchStep(5)" id="tab-5" class="nav-tab px-3 py-1.5 rounded-md font-medium text-slate-300 hover:text-white hover:bg-slate-700">5. Fluent Use (15m)</button>
+</div>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <main class="flex-1 max-w-6xl w-full mx-auto p-4 sm:p-6 lg:p-8">
+<section id="step-0" class="step-section active"><div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200 mb-6">
+<div class="flex flex-wrap items-center justify-between gap-4 mb-6"><div><span class="inline-block bg-brand-100 text-brand-800 text-xs px-3 py-1 rounded-full font-semibold uppercase tracking-wide">Lesson 1.1.6 Overview</span><h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-2">Cultural Diversity in the US</h2></div><div class="text-right"><span class="text-sm text-slate-500 block">Total Duration</span><span class="text-xl font-bold text-slate-800">75 Minutes</span></div></div>
+<p class="text-slate-600 leading-relaxed mb-6">Explore the many communities and languages in the United States, and practice respectful communication in everyday life and customer service. Learn to ask instead of assuming.</p>
+<div class="grid md:grid-cols-3 gap-4 mb-8"><div class="p-4 bg-slate-50 rounded-xl border border-slate-200"><div class="text-brand-600 font-bold text-lg mb-1">01. Cultural Awareness</div><p class="text-xs text-slate-600">Describe linguistic and cultural diversity in the US using accurate, respectful language.</p></div><div class="p-4 bg-slate-50 rounded-xl border border-slate-200"><div class="text-brand-600 font-bold text-lg mb-1">02. Communication</div><p class="text-xs text-slate-600">Ask curious, appropriate questions without making assumptions or stereotypes.</p></div><div class="p-4 bg-slate-50 rounded-xl border border-slate-200"><div class="text-brand-600 font-bold text-lg mb-1">03. Workplace Application</div><p class="text-xs text-slate-600">Use respectful language in a customer service scenario and reflect on your approach.</p></div></div>
+<h3 class="font-bold text-slate-800 text-lg mb-3">Lesson Roadmap</h3><div class="overflow-x-auto"><table class="w-full text-left text-xs sm:text-sm border-collapse"><thead><tr class="bg-slate-100 text-slate-700"><th class="p-3 rounded-l-lg">Stage</th><th class="p-3">Focus Area</th><th class="p-3">Time</th><th class="p-3 rounded-r-lg">Activity Output</th></tr></thead><tbody class="divide-y divide-slate-200"><tr><td class="p-3 font-semibold text-slate-800">Encounter</td><td class="p-3 text-slate-600">Video & observation</td><td class="p-3 text-slate-500">10 min</td><td class="p-3 text-slate-600">Observation notes and pair discussion</td></tr><tr><td class="p-3 font-semibold text-slate-800">Clarify</td><td class="p-3 text-slate-600">Languages, identities & vocabulary</td><td class="p-3 text-slate-500">20 min</td><td class="p-3 text-slate-600">Map exploration and flipcards</td></tr><tr><td class="p-3 font-semibold text-slate-800">Remember</td><td class="p-3 text-slate-600">Cultural Detective</td><td class="p-3 text-slate-500">15 min</td><td class="p-3 text-slate-600">Eight checked decisions with feedback</td></tr><tr><td class="p-3 font-semibold text-slate-800">Internalize</td><td class="p-3 text-slate-600">Real conversations</td><td class="p-3 text-slate-500">15 min</td><td class="p-3 text-slate-600">Social and workplace role-plays</td></tr><tr><td class="p-3 font-semibold text-slate-800">Fluent Use</td><td class="p-3 text-slate-600">Compare, communicate & reflect</td><td class="p-3 text-slate-500">15 min</td><td class="p-3 text-slate-600">Discussion, speaking challenge and exit ticket</td></tr></tbody></table></div><div class="mt-8 text-center"><button onclick="switchStep(1)" class="bg-brand-600 hover:bg-brand-700 text-white font-bold py-3 px-8 rounded-xl text-base shadow-md transition-all">Start Lesson: Encounter →</button></div></div></section>
+<section id="step-1" class="step-section"><div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200"><div class="flex flex-wrap justify-between items-center gap-3 mb-5"><h2 class="text-slate-900">Encounter · A Multicultural America</h2><span class="bg-brand-100 text-brand-800 rounded-full px-3 py-1 text-xs font-semibold">10 min</span></div><p class="mb-4"><strong>Mission:</strong> Notice how people from different backgrounds contribute to life in the United States.</p><h3 class="mb-3">Before You Watch</h3><div class="p-4 bg-slate-50 rounded-xl border border-slate-200 my-4">What does <strong>multicultural</strong> mean to you? Name one example of cultural diversity in your community.</div><h3 class="mt-7 mb-3">Watch the Video</h3><p class="mb-3">Open the video on YouTube in a new tab, then return to this lesson.</p><a class="inline-block bg-brand-600 hover:bg-brand-700 text-white font-semibold py-3 px-5 rounded-xl" href="https://youtu.be/p-Sk8opVkVw?si=D_XIr4OpJTG5ziAM" target="_blank" rel="noopener noreferrer">▶ Watch Video on YouTube ↗</a><p class="text-sm text-slate-500 mt-2">The Future of America is Multi-Cultural | Please Explain · Approximately 5 minutes</p><h3 class="mt-7 mb-3">While You Watch · Observation Guide</h3><p class="mb-3 text-slate-600">These are observation prompts, not a transcript-based quiz. Write examples you notice.</p><ol class="list-decimal pl-6 space-y-2 mb-4"><li>What is the main idea of the video?</li><li>What examples of cultural diversity do you notice?</li><li>Does the video discuss changes in US society? Explain one.</li><li>What is one new idea you learned?</li><li>Why might cultural awareness matter when talking with people in the US?</li></ol><label for="video-notes" class="font-semibold">Video notes</label><textarea id="video-notes" class="w-full border border-slate-300 rounded-lg p-3 mt-2 min-h-28" placeholder="Write keywords or examples from the video..."></textarea><div class="p-4 bg-slate-50 rounded-xl border border-slate-200 my-4"><strong>Pair share:</strong> “One thing I noticed was…” · “I was surprised that…” · “I think this matters because…”</div><div class="mt-8 pt-5 border-t border-slate-200 text-right"><button onclick="switchStep(2)" class="text-brand-600 hover:text-brand-800 font-bold text-sm">Continue to Next Stage →</button></div></div></section>
+<section id="step-2" class="step-section"><div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200"><div class="flex flex-wrap justify-between items-center gap-3 mb-5"><h2 class="text-slate-900">Clarify · Languages, Identities and Respectful Words</h2><span class="bg-brand-100 text-brand-800 rounded-full px-3 py-1 text-xs font-semibold">20 min</span></div><p class="mb-4">The United States is home to many languages, communities, and cultural traditions. No single experience represents everyone.</p><h3 class="mb-3">Explore the Language Map</h3><p class="mb-3">Read the <a class="text-brand-600 underline font-semibold" href="https://www.newsweek.com/map-shows-most-spoken-languages-each-state-besides-english-spanish-1993046" target="_blank" rel="noopener noreferrer">Newsweek language-map article ↗</a>. It explores languages spoken across US states beyond English and Spanish.</p><div class="grid md:grid-cols-3 gap-4 mb-7"><div class="p-4 bg-slate-50 rounded-xl border border-slate-200 my-4"><strong>Notice:</strong> Which languages appear on the map? Which ones are new to you?</div><div class="p-4 bg-slate-50 rounded-xl border border-slate-200 my-4"><strong>Compare:</strong> Do all states have the same language patterns? Why might they differ?</div><div class="p-4 bg-slate-50 rounded-xl border border-slate-200 my-4"><strong>Apply:</strong> Why shouldn't a customer service agent assume what language someone speaks?</div></div><h3 class="mb-3">Vocabulary Flashcards</h3><p class="mb-4">Select a card to flip it. The front shows the term; the back shows its meaning and an example.</p><div id="cards-container" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6"></div><h3 class="mb-3">People and Identities</h3><p class="mb-3">Terms such as <strong>Mexican American, Chinese American, African American, Indian American,</strong> and <strong>Native American</strong> refer to different identities or communities. People may describe themselves in different ways. Use the identity someone chooses for themselves and avoid assuming identity from appearance, accent, or name.</p><div class="p-4 bg-slate-50 rounded-xl border border-slate-200 my-4"><strong>Useful language:</strong> “People in the US have different backgrounds.” · “Some families speak more than one language at home.” · “I don't want to make assumptions.” · “Could you tell me more about that?”</div><h3 class="mb-3">Say It More Respectfully</h3><div class="grid md:grid-cols-2 gap-4"><div class="p-4 bg-slate-50 rounded-xl border border-slate-200 my-4"><strong>Instead of:</strong> “Everyone in the US celebrates the same holidays.”<p><strong>Try:</strong> “People in the US celebrate many different holidays.”</p></div><div class="p-4 bg-slate-50 rounded-xl border border-slate-200 my-4"><strong>Instead of:</strong> “You must speak Spanish.”<p><strong>Try:</strong> “Which language would you prefer to use?”</p></div></div><div class="mt-8 pt-5 border-t border-slate-200 text-right"><button onclick="switchStep(3)" class="text-brand-600 hover:text-brand-800 font-bold text-sm">Continue to Next Stage →</button></div></div></section>
+<section id="step-3" class="step-section"><div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200"><div class="flex flex-wrap justify-between items-center gap-3 mb-5"><h2 class="text-slate-900">Remember · Cultural Detective</h2><span class="bg-brand-100 text-brand-800 rounded-full px-3 py-1 text-xs font-semibold">15 min</span></div><p class="mb-4">Eight situations. Choose the most culturally aware response. Select <strong>Check Answer</strong> to see feedback and your score. You can retry a question.</p><div class="h-2 bg-slate-200 rounded-full overflow-hidden mb-3"><div id="gameProgress" class="bg-brand-600 h-full transition-all" style="width:0%"></div></div><p id="gameCount" class="text-slate-600 mb-4" aria-live="polite"></p><div id="gameArea" class="space-y-3"></div><div class="flex flex-wrap gap-3 mt-5"><button id="checkQuestion" class="bg-brand-600 hover:bg-brand-700 text-white px-5 py-2.5 rounded-lg">Check Answer</button><button id="nextQuestion" class="hidden bg-brand-600 hover:bg-brand-700 text-white px-5 py-2.5 rounded-lg">Next Challenge →</button><button id="restartGame" class="hidden bg-slate-200 text-slate-800 px-5 py-2.5 rounded-lg">Reset Challenge</button></div><div class="mt-8 pt-5 border-t border-slate-200 text-right"><button onclick="switchStep(4)" class="text-brand-600 hover:text-brand-800 font-bold text-sm">Continue to Next Stage →</button></div></div></section>
+<section id="step-4" class="step-section"><div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200"><div class="flex flex-wrap justify-between items-center gap-3 mb-5"><h2 class="text-slate-900">Internalize · Practice Real Conversations</h2><span class="bg-brand-100 text-brand-800 rounded-full px-3 py-1 text-xs font-semibold">15 min</span></div><p class="mb-4">Work in pairs. Select a scenario to reveal guiding questions and language support. Switch roles after your first attempt.</p><div class="flex flex-wrap gap-3 mb-5"><button id="socialBtn" onclick="scenario('social')" class="scenario-btn bg-brand-600 text-white rounded-lg px-4 py-2" aria-pressed="true">Everyday Conversation</button><button id="workBtn" onclick="scenario('work')" class="scenario-btn bg-slate-200 text-slate-800 rounded-lg px-4 py-2" aria-pressed="false">Customer Service</button></div><div id="social" class="scenario-content"><h3 class="mb-3">Scenario A · Meeting Someone New</h3><p>You meet a new coworker who mentions a family tradition you don't know. Show interest without assuming that everyone in their community has the same experience.</p><div class="p-4 bg-slate-50 rounded-xl border border-slate-200 my-4"><strong>Guiding questions:</strong><ul class="list-disc pl-6 mt-2"><li>How can you politely ask about the tradition?</li><li>How can you show that you're listening?</li><li>What can you say if you don't understand something?</li><li>How can you share a tradition from your own community without generalizing?</li></ul></div><p><strong>Useful expressions:</strong> “That sounds interesting.” · “Would you mind telling me more?” · “In my family, we usually…” · “Thanks for sharing!”</p></div><div id="work" class="scenario-content hidden"><h3 class="mb-3">Scenario B · Helping a Customer</h3><p>A customer says they are more comfortable using another language and asks whether support is available. You don't know which language they prefer or which services your company offers.</p><div class="p-4 bg-slate-50 rounded-xl border border-slate-200 my-4"><strong>Guiding questions:</strong><ul class="list-disc pl-6 mt-2"><li>How do you ask for their preferred language?</li><li>How can you acknowledge their request respectfully?</li><li>What can you say without promising an unverified service?</li><li>How would you explain the next step clearly?</li></ul></div><p><strong>Useful expressions:</strong> “I'd be happy to check the available options.” · “Which language would you prefer?” · “Thank you for letting me know.” · “Let me confirm what support is available.”</p></div><h3 class="mt-7 mb-3">Partner Feedback</h3><div class="space-y-2"><label class="block"><input type="checkbox" class="mr-2 accent-brand-600">My partner asked instead of assuming.</label><label class="block"><input type="checkbox" class="mr-2 accent-brand-600">My partner used respectful, clear English.</label><label class="block"><input type="checkbox" class="mr-2 accent-brand-600">My partner listened and responded appropriately.</label></div><div class="mt-8 pt-5 border-t border-slate-200 text-right"><button onclick="switchStep(5)" class="text-brand-600 hover:text-brand-800 font-bold text-sm">Continue to Next Stage →</button></div></div></section>
+<section id="step-5" class="step-section"><div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200"><div class="flex flex-wrap justify-between items-center gap-3 mb-5"><h2 class="text-slate-900">Fluent Use · Compare, Communicate, Reflect</h2><span class="bg-brand-100 text-brand-800 rounded-full px-3 py-1 text-xs font-semibold">15 min</span></div><h3 class="mb-3">Group Discussion</h3><p>Compare cultural diversity in the United States with cultural diversity in your country. Speak from your own experience and avoid generalizations.</p><div class="p-4 bg-slate-50 rounded-xl border border-slate-200 my-4"><strong>Discussion prompts:</strong><ol class="list-decimal pl-6 mt-2 space-y-1"><li>What languages are spoken in your country?</li><li>What cultural traditions or celebrations do you know?</li><li>What similarities and differences can you identify between your country and the US?</li><li>Why is it important to avoid stereotypes?</li><li>How can cultural awareness help in a customer service conversation?</li></ol></div><h3 class="mt-7 mb-3">Mini Challenge · 60-Second Response</h3><p>Imagine a customer tells you: “People often make assumptions about me because of my accent.” Respond with empathy, then explain how you would help them feel respected.</p><div class="p-4 bg-slate-50 rounded-xl border border-slate-200 my-4"><strong>Speaking frame:</strong> “I'm sorry that happened. Thank you for telling me. I want to make sure…”</div><h3 class="mt-7 mb-3">Self-Assessment</h3><div class="space-y-2 mb-5"><label class="block"><input type="checkbox" class="mr-2">I can explain cultural diversity using clear English.</label><label class="block"><input type="checkbox" class="mr-2">I can compare traditions without stereotyping.</label><label class="block"><input type="checkbox" class="mr-2">I can ask respectful questions when I am unsure.</label><label class="block"><input type="checkbox" class="mr-2">I can respond professionally to a customer from a different background.</label></div><label for="exit-ticket" class="font-semibold">Exit ticket: “One communication habit I will use is…”</label><textarea id="exit-ticket" class="w-full border border-slate-300 rounded-lg p-3 mt-2 min-h-28" placeholder="One communication habit I will use is..."></textarea><div class="mt-8 pt-5 border-t border-slate-200 text-right"><button onclick="switchStep(0)" class="text-brand-600 hover:text-brand-800 font-bold text-sm">Return to Overview ↺</button></div></div></section>
+</main>
+
+    <!-- Master bottom navigation: available on every lesson screen -->
+    <div class="master-bottom-nav no-print" aria-label="Lesson navigation">
+      <button type="button" id="previous-section" onclick="switchStep(currentStep-1)" disabled>← Back</button>
+      <span id="bottom-section-label" style="color:#54595f;font-size:14px;font-weight:500">Overview · 1 of 6</span>
+      <button type="button" id="next-section" onclick="switchStep(currentStep+1)">Next →</button>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#2a2c2e] border-t border-[#54595f] text-slate-400 text-xs py-6 text-center no-print mt-auto">
+        <div class="max-w-7xl mx-auto px-4">
+            <p>10 Week English Program | Lesson 1.1.6: Cultural Diversity in the US (CEFR A2–B1)</p>
+            <p class="text-slate-500 text-[10px] mt-1">Designed for interactive oral fluency and instructional efficiency.</p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+<script>
+let currentStep = 0;
+        function switchStep(stepIndex) {
+            if (stepIndex < 0 || stepIndex > 5) return;
+            currentStep = stepIndex;
+            const steps = document.querySelectorAll('.step-section');
+            const tabs = document.querySelectorAll('.nav-tab');
+
+            steps.forEach((step, idx) => {
+                if (idx === stepIndex) {
+                    step.classList.add('active');
+                } else {
+                    step.classList.remove('active');
+                }
+            });
+
+            tabs.forEach((tab, idx) => {
+                if (idx === stepIndex) {
+                    tab.classList.remove('text-slate-300', 'hover:bg-slate-700');
+                    tab.classList.add('text-white', 'bg-brand-600');
+                    tab.setAttribute('aria-current', 'step');
+                } else {
+                    tab.classList.remove('text-white', 'bg-brand-600');
+                    tab.classList.add('text-slate-300', 'hover:bg-slate-700');
+                    tab.removeAttribute('aria-current');
+                }
+            });
+
+            // Update Progress Bar
+            const progress = ((stepIndex + 1) / steps.length) * 100;
+            document.getElementById('progress-bar').style.width = `${progress}%`;
+            document.getElementById('progress-track').setAttribute('aria-valuenow', String(stepIndex+1));
+            document.getElementById('previous-section').disabled = stepIndex === 0;
+            document.getElementById('next-section').disabled = stepIndex === steps.length-1;
+            document.getElementById('next-section').textContent = stepIndex === steps.length-1 ? 'Completed ✓' : 'Next →';
+            const sectionName = tabs[stepIndex].textContent.trim();
+            document.getElementById('bottom-section-label').textContent = `${sectionName} · ${stepIndex+1} of ${steps.length}`;
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+const vocab = [
+['diverse','/daɪˈvɜːrs/','Including people or things with different backgrounds.','The US has a diverse population.'],
+['multicultural','/ˌmʌl.tiˈkʌl.tʃər.əl/','Including people from multiple cultures.','Our team is multicultural.'],
+['traditional','/trəˈdɪʃ.ən.əl/','Connected with customs passed down over time.','My family cooks a traditional meal.'],
+['modern','/ˈmɑː.dɚn/','Connected with the present time or recent ways of life.','Modern cities can include many cultural communities.'],
+['background','/ˈbæk.ɡraʊnd/','A person’s experiences, family history, and origins.','My colleagues have different backgrounds.'],
+['heritage','/ˈher.ɪ.tɪdʒ/','Traditions and history passed down from previous generations.','She enjoys learning about her family heritage.'],
+['identity','/aɪˈden.tə.ti/','How someone understands and describes who they are.','People can have many parts to their identity.'],
+['stereotype','/ˈster.i.ə.taɪp/','An unfair generalization about a group.','Avoid stereotypes when talking with customers.'],
+['respectful','/rɪˈspekt.fəl/','Showing care and consideration for others.','Ask a respectful question.']
+];
+function renderVocabularyCards(){const container=document.getElementById('cards-container');container.innerHTML='';vocab.forEach(([term,ipa,meaning,example],i)=>{const button=document.createElement('button');button.type='button';button.className='perspective-1000 text-left min-h-[185px] rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-600';button.setAttribute('aria-label','Flip '+term+' flashcard');button.setAttribute('aria-pressed','false');button.innerHTML='<div class="transform-style-3d relative h-full min-h-[185px]" style="transform:rotateY(0deg)"><div class="backface-hidden absolute inset-0 bg-white rounded-xl border border-slate-200 shadow-sm flex flex-col justify-center items-center p-4"><span class="font-bold text-brand-600 text-lg">'+term+'</span><span class="text-slate-500 text-sm mt-2">'+ipa+'</span><span class="text-slate-500 text-xs mt-3">Click to flip ↻</span></div><div class="backface-hidden absolute inset-0 bg-slate-50 rounded-xl border border-slate-200 shadow-sm p-4 flex flex-col justify-center" style="transform:rotateY(180deg)"><strong class="text-brand-600">'+term+'</strong><p class="text-sm mt-2">'+meaning+'</p><p class="text-sm mt-2 italic">'+example+'</p></div></div>';button.addEventListener('click',()=>{const inner=button.firstElementChild;const flipped=button.getAttribute('aria-pressed')!=='true';button.setAttribute('aria-pressed',String(flipped));inner.style.transform=flipped?'rotateY(180deg)':'rotateY(0deg)'});container.appendChild(button)})}
+const qs=[
+{q:'A customer mentions a holiday you do not know. What is the best response?',a:['“That sounds strange.”','“Would you like to tell me more about it?”','“Everyone celebrates the same holidays.”'],correct:1,why:'Curiosity and respect help you learn without making assumptions.'},
+{q:'You hear someone speaking a language you do not recognize. What should you do?',a:['Guess their nationality.','Ask what language they prefer if it is relevant.','Tell them to speak English.'],correct:1,why:'Ask about preferences when needed instead of guessing identity.'},
+{q:'Which statement is most accurate?',a:['Everyone from one community has identical traditions.','People within the same community can have different experiences.','An accent tells you where a person was born.'],correct:1,why:'Individuals within a cultural group are not all the same.'},
+{q:'A coworker has a different family tradition. You should…',a:['Listen and ask respectful questions.','Laugh because it is unfamiliar.','Say your tradition is better.'],correct:0,why:'Active listening supports positive relationships.'},
+{q:'What does “multicultural” describe?',a:['A place where everyone has one background.','A society with people from different cultural backgrounds.','A place with only one language.'],correct:1,why:'Multicultural describes the presence of multiple cultural backgrounds.'},
+{q:'A customer asks about language support. What should you say?',a:['“We definitely have support in every language.”','“Let me check which options are available.”','“Your English should be better.”'],correct:1,why:'Be respectful and do not promise services you have not verified.'},
+{q:'Which is an example of a stereotype?',a:['“People may have different traditions.”','“I want to learn about your experience.”','“All people from that country behave the same way.”'],correct:2,why:'A stereotype makes an unfair generalization about a group.'},
+{q:'Why does cultural awareness matter in customer service?',a:['It helps us communicate respectfully with different people.','It lets us predict every customer’s preferences.','It means we never need to ask questions.'],correct:0,why:'Cultural awareness supports empathy, clarity, and inclusive communication.'}
+];
+let qi=0,score=0,selected=null,checked=false;
+const gameArea=document.getElementById('gameArea'),check=document.getElementById('checkQuestion'),next=document.getElementById('nextQuestion'),restart=document.getElementById('restartGame');
+function renderQ(){selected=null;checked=false;check.classList.remove('hidden');check.disabled=true;next.classList.add('hidden');restart.classList.add('hidden');document.getElementById('gameProgress').style.width=(qi/qs.length*100)+'%';document.getElementById('gameCount').textContent='Challenge '+(qi+1)+' of '+qs.length+' · '+score+' correct';const q=qs[qi];gameArea.innerHTML='';const heading=document.createElement('h3');heading.textContent=q.q;gameArea.appendChild(heading);q.a.forEach((answer,i)=>{const b=document.createElement('button');b.type='button';b.className='quiz-option block w-full text-left border border-slate-200 rounded-xl p-4 hover:bg-slate-50';b.textContent=String.fromCharCode(65+i)+'. '+answer;b.addEventListener('click',()=>{if(checked)return;selected=i;check.disabled=false;gameArea.querySelectorAll('.quiz-option').forEach(z=>{z.classList.remove('bg-brand-100','border-brand-600');z.setAttribute('aria-pressed','false')});b.classList.add('bg-brand-100','border-brand-600');b.setAttribute('aria-pressed','true')});gameArea.appendChild(b)});const p=document.createElement('p');p.id='gameFeedback';p.className='font-semibold mt-3';p.setAttribute('role','status');gameArea.appendChild(p)}
+check.addEventListener('click',()=>{if(selected===null||checked)return;const q=qs[qi],feedback=document.getElementById('gameFeedback');if(selected===q.correct){score++;checked=true;feedback.className='text-green-700 font-semibold mt-3';feedback.textContent='✓ Correct! '+q.why;check.classList.add('hidden');next.classList.remove('hidden');gameArea.querySelectorAll('.quiz-option').forEach(b=>b.disabled=true)}else{feedback.className='text-red-700 font-semibold mt-3';feedback.textContent='Not quite. Try another answer. Think about respect and avoiding assumptions.';gameArea.querySelectorAll('.quiz-option')[selected].disabled=true;selected=null;check.disabled=true}});
+next.addEventListener('click',()=>{qi++;if(qi===qs.length){document.getElementById('gameProgress').style.width='100%';document.getElementById('gameCount').textContent='Challenge complete';gameArea.innerHTML='<h3>You completed the Cultural Detective challenge!</h3><p>You answered '+score+' of '+qs.length+' questions correctly. Discuss one idea you will use in real conversations.</p>';check.classList.add('hidden');next.classList.add('hidden');restart.classList.remove('hidden')}else renderQ()});
+restart.addEventListener('click',()=>{qi=0;score=0;renderQ()});
+function scenario(id){document.querySelectorAll('.scenario-content').forEach(e=>e.classList.toggle('hidden',e.id!==id));[['socialBtn','social'],['workBtn','work']].forEach(([buttonId,which])=>{const b=document.getElementById(buttonId),active=id===which;b.classList.toggle('bg-brand-600',active);b.classList.toggle('text-white',active);b.classList.toggle('bg-slate-200',!active);b.classList.toggle('text-slate-800',!active);b.setAttribute('aria-pressed',String(active))})}
+renderVocabularyCards();renderQ();
+
+</script>
+
+</body>
+</html>
